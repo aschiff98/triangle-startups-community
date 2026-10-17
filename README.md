@@ -46,3 +46,5 @@ The original software and documentation in this repository are available under t
 ## Community experiments
 
 The proposed [Claude trial in PR #5](https://github.com/aschiff98/triangle-startups-community/pull/5) prepares a bounded task and independent checks. It has not connected or run Claude. New ideas should begin with an issue that explains the user problem, fictional or explicitly shareable inputs, a small first deliverable and how it will be checked. Starting a discussion does not grant access to private data or production services.
+
+A proposed [Triangle startup Q&A project](https://github.com/aschiff98/triangle-startups-community/issues/7) explores a small self-hostable model with dated sources and a measured cost target. Read the [project brief](proposals/triangle-questions.md) before proposing a first contribution. The model and data collection have not been built or connected.
