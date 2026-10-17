@@ -1,0 +1,36 @@
+name: Claude automation trial
+description: Define one bounded, fictional-data task and its review evidence.
+title: "Automation trial: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form defines a trial; it does not launch an agent. Follow experiments/claude/README.md. Keep private records and credentials out of the issue. The first prepared task is experiments/claude/job-review-packet/task.md.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What should the completed work do?
+      description: Give one concrete example and explain the operator work it removes.
+    validations:
+      required: true
+  - type: textarea
+    id: baseline
+    attributes:
+      label: Frozen baseline, inputs and writable paths
+      description: Include the full baseline SHA, fictional input paths and exact files the agent may change.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What independently proves it works?
+      description: Name expected outputs, negative cases, checks and any required screenshots. Agent completion messages are not evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Run environment, limits and reviewer
+      description: Name the isolated environment, model, time and external usage limit, and human reviewer. Record unknown values explicitly.
+    validations:
+      required: true

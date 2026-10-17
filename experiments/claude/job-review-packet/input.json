@@ -1,0 +1,156 @@
+{
+  "data": "Fictional sample data; no live coverage claim.",
+  "findings": [
+    {
+      "id": "listed",
+      "disposition": "listed",
+      "sourceUrl": "https://orchard.example.test/jobs/one",
+      "reason": "Confirmed open eligible job has the same employer and normalized posting URL in the supplied roster.",
+      "record": {
+        "id": "listed",
+        "employer": "Example Orchard",
+        "title": "Software Engineer",
+        "sourceUrl": "https://orchard.example.test/jobs/one",
+        "scope": "startup",
+        "availability": "open",
+        "postedOn": null,
+        "firstObservedOn": "2026-10-08",
+        "fetchedOn": "2026-10-09"
+      }
+    },
+    {
+      "id": "missing",
+      "disposition": "missing_confirmed_open",
+      "sourceUrl": "https://river.example.test/jobs/two",
+      "reason": "Supplied employer observation confirms an open eligible job with no matching employer and posting URL in the supplied roster.",
+      "record": {
+        "id": "missing",
+        "employer": "Example River",
+        "title": "Software Engineer",
+        "sourceUrl": "https://river.example.test/jobs/two",
+        "scope": "startup",
+        "availability": "open",
+        "postedOn": "2026-10-07",
+        "firstObservedOn": "2026-10-08",
+        "fetchedOn": "2026-10-09"
+      }
+    },
+    {
+      "id": "ecosystem-missing",
+      "disposition": "missing_confirmed_open",
+      "sourceUrl": "https://center.example.test/jobs/three",
+      "reason": "Supplied employer observation confirms an open eligible job with no matching employer and posting URL in the supplied roster.",
+      "record": {
+        "id": "ecosystem-missing",
+        "employer": "Example Startup Center",
+        "title": "Program Manager",
+        "sourceUrl": "https://center.example.test/jobs/three",
+        "scope": "ecosystem",
+        "availability": "open",
+        "postedOn": null,
+        "firstObservedOn": "2026-10-08",
+        "fetchedOn": "2026-10-09"
+      }
+    },
+    {
+      "id": "unknown",
+      "disposition": "availability_unknown",
+      "sourceUrl": "https://grove.example.test/jobs/four",
+      "reason": "Employer availability is unknown; absence or an unreachable source cannot establish closure or a missing open job.",
+      "record": {
+        "id": "unknown",
+        "employer": "Example Grove",
+        "title": "Software Engineer",
+        "sourceUrl": "https://grove.example.test/jobs/four",
+        "scope": "startup",
+        "availability": "unknown",
+        "postedOn": null,
+        "firstObservedOn": "2026-10-08",
+        "fetchedOn": "2026-10-09"
+      }
+    },
+    {
+      "id": "closed",
+      "disposition": "closed",
+      "sourceUrl": "https://harbor.example.test/jobs/five",
+      "reason": "Supplied employer observation says closed; excluded from the open-job denominator.",
+      "record": {
+        "id": "closed",
+        "employer": "Example Harbor",
+        "title": "Software Engineer",
+        "sourceUrl": "https://harbor.example.test/jobs/five",
+        "scope": "startup",
+        "availability": "closed",
+        "postedOn": null,
+        "firstObservedOn": "2026-10-08",
+        "fetchedOn": "2026-10-09"
+      }
+    },
+    {
+      "id": "duplicate",
+      "disposition": "duplicate",
+      "sourceUrl": "https://orchard.example.test/jobs/one",
+      "reason": "Same employer and normalized posting URL as listed; counted once.",
+      "record": {
+        "id": "duplicate",
+        "employer": "Example Orchard",
+        "title": "Software Engineer",
+        "sourceUrl": "https://orchard.example.test/jobs/one",
+        "scope": "startup",
+        "availability": "open",
+        "postedOn": null,
+        "firstObservedOn": "2026-10-08",
+        "fetchedOn": "2026-10-09"
+      }
+    },
+    {
+      "id": "enterprise",
+      "disposition": "out_of_scope",
+      "sourceUrl": "https://enterprise.example.test/jobs/six",
+      "reason": "Record is explicitly outside the startup and startup-support comparison; retained but excluded from the open-job denominator.",
+      "record": {
+        "id": "enterprise",
+        "employer": "Example Large Employer",
+        "title": "Software Engineer",
+        "sourceUrl": "https://enterprise.example.test/jobs/six",
+        "scope": "out_of_scope",
+        "availability": "open",
+        "postedOn": null,
+        "firstObservedOn": "2026-10-08",
+        "fetchedOn": "2026-10-09"
+      }
+    },
+    {
+      "id": "scope-unknown",
+      "disposition": "scope_unknown",
+      "sourceUrl": "https://unclassified.example.test/jobs/seven",
+      "reason": "Startup or startup-support eligibility has not been established.",
+      "record": {
+        "id": "scope-unknown",
+        "employer": "Example Unclassified",
+        "title": "Software Engineer",
+        "sourceUrl": "https://unclassified.example.test/jobs/seven",
+        "scope": "unknown",
+        "availability": "open",
+        "postedOn": null,
+        "firstObservedOn": "2026-10-08",
+        "fetchedOn": "2026-10-09"
+      }
+    }
+  ],
+  "summary": {
+    "employerRecords": 8,
+    "rosterRecords": 1,
+    "uniqueComparableJobs": 7,
+    "confirmedOpenEligibleJobs": 3,
+    "counts": {
+      "listed": 1,
+      "missing_confirmed_open": 2,
+      "availability_unknown": 1,
+      "closed": 1,
+      "duplicate": 1,
+      "out_of_scope": 1,
+      "scope_unknown": 1
+    }
+  }
+}
