@@ -1,0 +1,17 @@
+{
+  "note": "Fictional input only. Expected results are acceptance examples, not an implemented comparator or a claim about current job coverage.",
+  "employerRecords": [
+    { "id": "listed", "employer": "Example Orchard", "title": "Software Engineer", "sourceUrl": "https://orchard.example.test/jobs/one", "scope": "startup", "availability": "open", "postedOn": null, "firstObservedOn": "2026-10-08", "fetchedOn": "2026-10-09" },
+    { "id": "missing", "employer": "Example River", "title": "Software Engineer", "sourceUrl": "https://river.example.test/jobs/two", "scope": "startup", "availability": "open", "postedOn": "2026-10-07", "firstObservedOn": "2026-10-08", "fetchedOn": "2026-10-09" },
+    { "id": "ecosystem-missing", "employer": "Example Startup Center", "title": "Program Manager", "sourceUrl": "https://center.example.test/jobs/three", "scope": "ecosystem", "availability": "open", "postedOn": null, "firstObservedOn": "2026-10-08", "fetchedOn": "2026-10-09" },
+    { "id": "unknown", "employer": "Example Grove", "title": "Software Engineer", "sourceUrl": "https://grove.example.test/jobs/four", "scope": "startup", "availability": "unknown", "postedOn": null, "firstObservedOn": "2026-10-08", "fetchedOn": "2026-10-09" },
+    { "id": "closed", "employer": "Example Harbor", "title": "Software Engineer", "sourceUrl": "https://harbor.example.test/jobs/five", "scope": "startup", "availability": "closed", "postedOn": null, "firstObservedOn": "2026-10-08", "fetchedOn": "2026-10-09" },
+    { "id": "duplicate", "employer": "Example Orchard", "title": "Software Engineer", "sourceUrl": "https://orchard.example.test/jobs/one", "scope": "startup", "availability": "open", "postedOn": null, "firstObservedOn": "2026-10-08", "fetchedOn": "2026-10-09" },
+    { "id": "enterprise", "employer": "Example Large Employer", "title": "Software Engineer", "sourceUrl": "https://enterprise.example.test/jobs/six", "scope": "out_of_scope", "availability": "open", "postedOn": null, "firstObservedOn": "2026-10-08", "fetchedOn": "2026-10-09" },
+    { "id": "scope-unknown", "employer": "Example Unclassified", "title": "Software Engineer", "sourceUrl": "https://unclassified.example.test/jobs/seven", "scope": "unknown", "availability": "open", "postedOn": null, "firstObservedOn": "2026-10-08", "fetchedOn": "2026-10-09" }
+  ],
+  "publicRoster": [
+    { "id": "public-one", "employer": "Example Orchard", "title": "Software Engineer", "sourceUrl": "https://orchard.example.test/jobs/one", "scope": "startup", "availability": "open", "postedOn": null, "firstObservedOn": "2026-10-08", "fetchedOn": "2026-10-09" }
+  ],
+  "expected": { "listed": "listed", "missing": "missing_confirmed_open", "ecosystem-missing": "missing_confirmed_open", "unknown": "availability_unknown", "closed": "closed", "duplicate": "duplicate", "enterprise": "out_of_scope", "scope-unknown": "scope_unknown" }
+}

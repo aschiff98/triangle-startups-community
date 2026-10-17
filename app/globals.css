@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --land-bg: #0b0f1a;
+  --land-surface: #1f2a3f;
+  --land-elevated: #2a3852;
+  --land-border: #334155;
+  --land-border-hover: #475569;
+  --land-text: #ede9e3;
+  --land-text-secondary: #94a3b8;
+  --land-text-dim: #7a869a;
+  --land-accent: #c8b89a;
+  --land-gold: #c8b89a;
+  --land-link: #94a3b8;
+}
+
+body { margin: 0; background: var(--land-bg); color: var(--land-text); font-family: var(--font-body), sans-serif; }
+a, button, summary { outline-offset: 4px; }

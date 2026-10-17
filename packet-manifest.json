@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "date": "2026-10-09",
+  "sourceRevision": "85219217162964eada0e2e489ff970c5c68a0d9f",
+  "sourceHashes": {
+    "lib/resume-rules/matcher.ts": "d0639582cc7084667873bcc4629772c4c0b8496482b63481988fe4a374f5e3aa",
+    "lib/resume-rules/schema.ts": "be0f0fcc5a8aa637536e04a4a15f35bcd6975a45cea3bc9798cbacfe8eec889d",
+    "app/resume/rules/results.tsx": "d8a0724da6610eeefa7c73cf17a1afdfb166eb080d1a2d8656febeffa50ce279",
+    "public/fonts/dm-sans-variable.woff2": "468d56b6b25b05b70190b6c233d773f6f1770e8579827ce022a57f03fa8002fb",
+    "public/fonts/newsreader-roman.woff2": "2a69ec1c0fb79a464de0e19957cdb3a65b5f626d85fffd164f9de557d3a64878",
+    "public/fonts/newsreader-italic.woff": "7f1a1060bcb643c4c2ec5e3c86fb0972e06f2508a2e5a28ce9732545fc525ee3"
+  },
+  "exportedSourceHashes": {
+    "lib/resume-rules/matcher.ts": "7a49cbffa5adf8e8b73816c686d2090f8d176ce97f703f558267b274f3d14af8",
+    "lib/resume-rules/schema.ts": "be0f0fcc5a8aa637536e04a4a15f35bcd6975a45cea3bc9798cbacfe8eec889d",
+    "app/resume/rules/results.tsx": "d8a0724da6610eeefa7c73cf17a1afdfb166eb080d1a2d8656febeffa50ce279",
+    "public/fonts/dm-sans-variable.woff2": "468d56b6b25b05b70190b6c233d773f6f1770e8579827ce022a57f03fa8002fb",
+    "public/fonts/newsreader-roman.woff2": "2a69ec1c0fb79a464de0e19957cdb3a65b5f626d85fffd164f9de557d3a64878",
+    "public/fonts/newsreader-italic.woff": "7f1a1060bcb643c4c2ec5e3c86fb0972e06f2508a2e5a28ce9732545fc525ee3"
+  },
+  "substitutions": {
+    "lib/company-evidence-holds.ts": "Fictional held-example only; original hold records are omitted",
+    "lib/resume-rules/matcher.ts": "Real hardcoded employer-identity hold omitted; all other matching logic is retained",
+    "app/globals.css": "Eleven public landing tokens only; no full stylesheet"
+  },
+  "files": {
+    ".github/pull_request_template.md": "13e89caaadb6ebaf7cb6cb147d11a48f1520a798e2ed743f683d9f30786eb735",
+    ".github/workflows/checks.yml": "e5e117c7cfd3e21b9544148f346bb601c9c551756d7f4966aa6f503e82d39a00",
+    ".gitignore": "72a24bdb7b3fa2ae4de93104b6733350f789e45cb77e1c2d5c7b7b302ab5e833",
+    "AGENTS.md": "96e4875ccd7a3f925b38365029f910beb3072469ed9509ca07ec64dcd2d1b21c",
+    "CONTRIBUTING.md": "5098f2c8a1309fd74f8dca4188eb1169dce9a4045c8ca6158301aad3296db207",
+    "NOTICE.md": "69eda62d6b48b53dc6654e8b93614073f23f43c3962ad791e74dc0f0d2f62bd2",
+    "README.md": "fd77f17988983abdb870034817c3f5cccc65c663c899c325362f2805f0647298",
+    "app/globals.css": "5b3e835ebe23da16c711ddef1c20e205635ee1c913d42f0d25b70599c9cbebbe",
+    "app/layout.tsx": "671ef3ff3411f1c232a685cf8de1ea8ffb97c53572a4af301d0dab6eefa63871",
+    "app/page.tsx": "974a14bc517db8e68e90c2fb6904bcd11d52b4fda56d409268a678da6773413c",
+    "app/resume/rules/results.tsx": "d8a0724da6610eeefa7c73cf17a1afdfb166eb080d1a2d8656febeffa50ce279",
+    "fixtures/job-coverage.json": "ebf63137d7749548c3582eb7bf447f0e2fc5e924766b12c3ac37c0220b95e97e",
+    "fixtures/matching.ts": "2db4930ea9af55acee1f3893c197d13717e51e860351e65fa76a50c3bc8a6b03",
+    "issues/01-public-job-coverage-comparison.md": "71a9f10b12327e10337021cdfc4f2e216b1d8c3cb996a196f6b829f3f1dfa3a5",
+    "issues/02-compact-next-actions.md": "24a82d81df980a6fb21810033399cf178281de1c4bf69ff8c3d6ded77f27fec3",
+    "lib/company-evidence-holds.ts": "c7941bca68fdc86598e95c0da38c6cdd934d34e04e5a606ebc3266222d1594c8",
+    "lib/coverage/types.ts": "7ac5009766923f67f3b52b2d057f6dad4a0389c944d55c439a411558d0f57a91",
+    "lib/resume-rules/matcher.ts": "7a49cbffa5adf8e8b73816c686d2090f8d176ce97f703f558267b274f3d14af8",
+    "lib/resume-rules/schema.ts": "be0f0fcc5a8aa637536e04a4a15f35bcd6975a45cea3bc9798cbacfe8eec889d",
+    "licenses/DMSans-OFL.txt": "7ec15e79c59bc14b86436a17e5eb7926b46cbcaeb08e1a7e6c110b415e6eb2a2",
+    "licenses/Newsreader-OFL.txt": "865f0949b59fab5925506f80102dff3d12e8666412daf52d212db969d40adc25",
+    "next.config.mjs": "302d1d6bac6fd2b49c3894049618168f68da1ed0628365bc06ed4afa00335b97",
+    "package-lock.json": "fda98c5809f0c46e36a66d17f97f6c1f25c57c79b0f88804d44579b242f0ccf0",
+    "package.json": "d2aca6cbff25245066c5f877982722e058ae0eed67813e1320b8150572951432",
+    "postcss.config.mjs": "6a105a2984bce4dd48590e5164a0a6b20af6e13f2f683c9373d63a91d540426a",
+    "public/fonts/dm-sans-variable.woff2": "468d56b6b25b05b70190b6c233d773f6f1770e8579827ce022a57f03fa8002fb",
+    "public/fonts/newsreader-italic.woff": "7f1a1060bcb643c4c2ec5e3c86fb0972e06f2508a2e5a28ce9732545fc525ee3",
+    "public/fonts/newsreader-roman.woff2": "2a69ec1c0fb79a464de0e19957cdb3a65b5f626d85fffd164f9de557d3a64878",
+    "tests/baseline.test.ts": "f91bc2f41e23f866f62a4f1fcb8b6a307e97001814886a025a399d8a01be637b",
+    "tools/next.mjs": "d0a7e0140bab53a107db7e9126127fae24763141a81df54a319ea58948109954",
+    "tools/verify-packet.mjs": "87576cc503320dc29e6323f701a8a88bc162864241dff11b4882df9ae111a760",
+    "tsconfig.json": "71a46a9b75573d46f16ff42f2b4de8c903137c35b6990c42a6833106de7260d4"
+  },
+  "communityRepository": "https://github.com/aschiff98/triangle-startups-community",
+  "communityPreparedOn": "2026-10-10",
+  "starterArchive": {
+    "sha256": "42590313941e4543b2eebb232ea73c2fd5f67547da1d0da1881065afcbda845c",
+    "bytes": 173699,
+    "files": 31
+  },
+  "collaborationAdditions": [
+    ".github/pull_request_template.md",
+    ".github/workflows/checks.yml",
+    "CONTRIBUTING.md"
+  ],
+  "collaborationAdaptations": [
+    "README.md: public fork/PR setup and issue links",
+    "NOTICE.md: bounded collaboration publication, no general license selected",
+    "issues/: pull-request evidence wording and removal of private demo context"
+  ],
+  "generatedFilesOmitted": [
+    "next-env.d.ts: regenerated locally by Next.js and ignored by Git"
+  ]
+}
