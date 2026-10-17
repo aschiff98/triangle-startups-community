@@ -1,0 +1,153 @@
+{
+  "browser": "WebKit",
+  "route": "http://127.0.0.1:3319/#result-apply-example",
+  "cases": [
+    {
+      "width": 1440,
+      "example": "All four actions",
+      "cards": 3,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "example": "One result",
+      "cards": 1,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "example": "No results",
+      "cards": 0,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "example": "Reviewer decision",
+      "cards": 3,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "example": "Older records",
+      "cards": 2,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "example": "Watch only",
+      "cards": 1,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "example": "All four actions",
+      "cards": 3,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "example": "One result",
+      "cards": 1,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "example": "No results",
+      "cards": 0,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "example": "Reviewer decision",
+      "cards": 3,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "example": "Older records",
+      "cards": 2,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "example": "Watch only",
+      "cards": 1,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "example": "All four actions",
+      "cards": 3,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "example": "One result",
+      "cards": 1,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "example": "No results",
+      "cards": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "example": "Reviewer decision",
+      "cards": 3,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "example": "Older records",
+      "cards": 2,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "example": "Watch only",
+      "cards": 1,
+      "overflow": false
+    }
+  ],
+  "evidenceTarget": "result-apply-example",
+  "keyboardOpened": true,
+  "mouseOpened": true,
+  "allResultsDestination": "#all-results",
+  "fonts": {
+    "status": "loaded",
+    "faces": [
+      {
+        "family": "body",
+        "status": "loaded"
+      },
+      {
+        "family": "body Fallback",
+        "status": "unloaded"
+      },
+      {
+        "family": "display",
+        "status": "loaded"
+      },
+      {
+        "family": "display",
+        "status": "loaded"
+      },
+      {
+        "family": "display Fallback",
+        "status": "unloaded"
+      }
+    ]
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "externalRequests": [],
+  "environment": "local production bundle",
+  "clientDate": "2026-10-15",
+  "sourceHashes": {
+    "app/page.tsx": "57c2c41dd9bfb91d879683a695ef02af363395cc4daa1e3ffb3786f966a450d5",
+    "app/resume/rules/results.tsx": "1cc64eabf78c428a5b0d229e9ee43c9532399cf5a850220e470fd1d3ea3d3bfc",
+    "fixtures/presentation.ts": "a5ec0ea03085667f23f26c8d2f6d6cc91636e948deee302d4a5e5a8c834d1974"
+  }
+}

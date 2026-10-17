@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { actions, actionsForOpportunity, operatorReviewSchema, recommendationAction, type OperatorReview, type Recommendation, type MatchResult } from '@/lib/resume-rules/schema'
 
+const evidenceId = (id: string) => `result-${encodeURIComponent(id)}`
+
 /** Shared neutral layout for this matcher and normalized historical output. */
 export function Results({ result, onReview }: { result: MatchResult; onReview?: (id: string, review: OperatorReview | undefined) => void }) {
   const groups = actions.map(action => ({ action, items: result.recommendations.filter(item => recommendationAction(item) === action) }))
@@ -11,9 +13,41 @@ export function Results({ result, onReview }: { result: MatchResult; onReview?: 
     watch: 'Leads that need review or fresh evidence before an application or conversation.',
   }
   const labels = { apply: 'Apply', clarify: 'Clarify', meet: 'Meet', watch: 'Watch' }
+  const nextSteps = result.recommendations.slice(0, 3)
   return <section aria-label="Opportunity results" className="space-y-8">
-    <div className="border-t border-[var(--land-border)] pt-8">
-      <h2 className="font-[family-name:var(--font-display)] text-3xl">What to investigate next</h2>
+    <section aria-labelledby="next-steps-heading" className="border-t border-[var(--land-border)] pt-8">
+      <h2 id="next-steps-heading" className="font-[family-name:var(--font-display)] text-3xl">Your next steps</h2>
+      <p className="mt-2 text-sm text-[var(--land-text-secondary)]">Start here, then check the full evidence before acting.</p>
+      {nextSteps.length ? <ol className="mt-5 grid items-start gap-4 md:grid-cols-3">
+        {nextSteps.map((item, index) => {
+          const action = recommendationAction(item)
+          const reason = item.operatorReview?.reason ?? item.basis
+          const caveat = action === 'clarify' ? item.questions[0] ?? item.operatorReview?.reason ?? 'Confirm the unresolved requirements before deciding whether to apply.'
+            : action === 'meet' ? 'Company research only. No opening or hiring interest is established.'
+            : action === 'watch' ? item.questions[0] ?? 'Refresh availability before choosing an application or conversation.'
+            : 'Check the complete posting and requirements before applying.'
+          const linkLabel = action === 'apply' ? 'View advertised job' : action === 'meet' ? 'Read company source' : 'Check source'
+          return <li key={item.opportunity.id} className="min-w-0 rounded-xl border border-[var(--land-border)] bg-[var(--land-surface)] p-5">
+            <div className="flex items-center justify-between gap-3">
+              <span aria-hidden="true" className="font-[family-name:var(--font-display)] text-2xl italic tabular-nums">{index + 1}</span>
+              <span className="rounded-full border border-[var(--land-border-hover)] px-3 py-1 text-xs">{labels[action]}</span>
+            </div>
+            <h3 className="mt-3 line-clamp-3 break-words font-[family-name:var(--font-display)] text-2xl leading-tight">{item.opportunity.title || item.opportunity.company}</h3>
+            {item.opportunity.title && <p className="mt-2 break-words text-sm text-[var(--land-text-secondary)]">{item.opportunity.company}</p>}
+            <p className="mt-4 whitespace-pre-wrap break-words text-sm leading-relaxed">{reason}</p>
+            {item.operatorReview && <div className="mt-2 text-xs text-[var(--land-text-secondary)]"><p>Reviewer decision · {item.operatorReview.reviewedOn}</p>{item.operatorReview.source !== item.opportunity.source && <a href={item.operatorReview.source} target="_blank" rel="noreferrer" className="mt-1 inline-block py-2 underline underline-offset-4">Reviewer source</a>}</div>}
+            {!item.action && !item.operatorReview && <p className="mt-2 text-xs text-[var(--land-text-secondary)]">Older record · no original action assigned</p>}
+            <p className="mt-3 whitespace-pre-wrap break-words text-xs leading-relaxed text-[var(--land-text-secondary)]">{caveat}</p>
+            <p className="mt-2 text-xs text-[var(--land-text-dim)]">Source recorded {item.opportunity.checkedOn}</p>
+            <a href={item.opportunity.source} target="_blank" rel="noreferrer" className="mt-4 block rounded-lg border border-[var(--land-border-hover)] px-3 py-3 text-center text-sm underline underline-offset-4 hover:bg-[var(--land-elevated)]">{linkLabel}<span className="sr-only"> for {item.opportunity.company}</span></a>
+            <a href={`#${encodeURIComponent(evidenceId(item.opportunity.id))}`} className="mt-2 block px-1 py-3 text-sm text-[var(--land-link)] underline underline-offset-4">Read full evidence<span className="sr-only"> for {item.opportunity.company}</span></a>
+          </li>
+        })}
+      </ol> : <p className="mt-5 rounded-lg border border-[var(--land-border)] p-5 text-sm leading-relaxed">No next steps in this snapshot. Review the source evidence or adjust your search before choosing an action.</p>}
+      <a href="#all-results" className="mt-5 inline-block py-3 text-sm text-[var(--land-link)] underline underline-offset-4">All {result.recommendations.length} {result.recommendations.length === 1 ? 'result' : 'results'} and full evidence</a>
+    </section>
+    <div id="all-results" className="scroll-mt-8 border-t border-[var(--land-border)] pt-8">
+      <h2 className="font-[family-name:var(--font-display)] text-3xl">All results and evidence</h2>
       <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">{groups.map(({ action, items }) => <a key={action} href={`#action-${action}`} className="rounded-lg border border-[var(--land-border)] p-4 hover:bg-[var(--land-elevated)]">
         <span className="block font-[family-name:var(--font-display)] text-3xl italic tabular-nums">{items.length}</span><span className="mt-1 block text-sm">{labels[action]}</span>
       </a>)}</div>
@@ -24,7 +58,7 @@ export function Results({ result, onReview }: { result: MatchResult; onReview?: 
     {groups.map(({ action, items }) => <div key={action} id={`action-${action}`} className="scroll-mt-8">
       <h3 className="font-[family-name:var(--font-display)] text-2xl">{labels[action]}</h3>
       <p className="mb-4 mt-2 text-sm leading-relaxed text-[var(--land-text-secondary)]">{descriptions[action]}{!items.length && ' No records in this group.'}</p>
-      <div className="space-y-5">{items.map(item => <article key={item.opportunity.id} className="rounded-xl border border-[var(--land-border)] bg-[var(--land-surface)] p-5 sm:p-7">
+      <div className="space-y-5">{items.map(item => <article key={item.opportunity.id} id={evidenceId(item.opportunity.id)} tabIndex={-1} className="scroll-mt-8 rounded-xl border border-[var(--land-border)] bg-[var(--land-surface)] p-5 sm:p-7">
         <p className="text-xs text-[var(--land-text-secondary)]">{item.opportunity.kind === 'opening' ? 'Advertised opening' : 'Company research · no opening established'} · {item.opportunity.location || 'Location unknown'}</p>
         <h4 className="mt-2 font-[family-name:var(--font-display)] text-2xl">{item.opportunity.title || item.opportunity.company}{item.opportunity.title && <span className="mt-1 block font-[family-name:var(--font-body)] text-sm text-[var(--land-text-secondary)]">{item.opportunity.company}</span>}</h4>
         <p className="mt-3 text-sm leading-relaxed">{item.basis}</p>
