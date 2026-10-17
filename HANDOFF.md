@@ -5,7 +5,7 @@ date: 2026-10-17
 
 # Community publication
 
-The community starter is being published under MIT using a fresh independent Git history. The earlier repository remains private because the owner chose not to publish its personal author contact metadata. The new repository recreates the original issues and separate contribution PRs without copying old Git objects or workflow records. Clone the new community repository for future work; do not push branches from an old local clone into it.
+The community starter is public under MIT using a fresh independent Git history. Both earlier repository copies remain private because the owner chose not to publish their personal author contact metadata. Commit-email privacy is enabled, and the final repository's generated PR merge commits use GitHub no-reply identities. The public repository recreates the original issues and separate contribution PRs without copying old Git objects or workflow records. Clone the new community repository for future work; do not push branches from an old local clone into it.
 
 The separate coverage, compact-results and Claude preparation PRs remain for review. Claude has not run or been connected. Publication does not deploy Triangle Startups or grant access to its private platform.
 

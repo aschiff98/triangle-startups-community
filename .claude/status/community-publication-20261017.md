@@ -5,8 +5,8 @@ date: 2026-10-17
 
 ## Task: Publish the sanitized community repository with an open-source license
 - Status: review-ready
-- Blocker: none after the fresh repository's final contact-metadata check
-- Next action: Complete the visibility check, then review the separate feature PRs and Triangle questions proposal.
+- Blocker: none
+- Next action: Review the separate feature PRs and Triangle questions proposal.
 - Branch: codex/public-release-review-20261017
 - Source prompt: ad-hoc
 - Started: 2026-10-17
@@ -28,3 +28,7 @@ Prior content audit covered eight reachable commits, 74 unique blobs, ten screen
 ## Next
 
 Review the Triangle questions proposal and agree a bounded first experiment with explicitly shareable data. No model or provider has been connected.
+
+## 2026-10-17 · public release verified
+
+The owner approved commit-email privacy; it is enabled and verified after reload. The final repository passes the no-reply identity gate across all nine prepublication commits, including generated merge refs. Anonymous access confirms PUBLIC visibility and MIT detection; the old private root commit is not accessible through the public repository. Both earlier histories remain private. CI is restricted to the two reviewed pinned actions with read-only tokens. The broader all-actions setting was rejected by automatic review; the narrower alternative was accepted. The final documentation update triggers a new public-repository check, while the unchanged feature commits already have local and prior exact-commit hosted evidence.
