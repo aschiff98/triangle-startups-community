@@ -45,3 +45,11 @@ Anonymous checks now confirm public visibility, MIT license detection and access
 Contributor checks allow only the exact reviewed `actions/checkout` and `actions/setup-node` commit SHAs already in the workflow. Broad GitHub-owned and verified-creator allowances are disabled, full SHA pinning is required, and the workflow token remains read-only with no PR-approval authority. Automatic approval review rejected the broader all-actions setting; the exact two-action alternative was accepted and verified. No deployment or model integration was activated.
 
 The identical five source commits passed hosted contributor checks in the private preparation copy. Initial events in the final repository occurred before its Actions activation and were not replayed. This final documentation update triggers a fresh check of the public repository's existing workflow. Its eventual check result must be read separately from the earlier exact-commit evidence; no new feature behavior was introduced by this update.
+
+## Main protection and contributor clarity on 2026-10-17
+
+GitHub's branch-protection API confirms `main` is protected. Merges require a PR, an up-to-date branch, the **Test, build and types** check from the GitHub Actions app (ID 15368), and resolved review conversations. Admin enforcement is enabled; force pushes and deletion are disabled. There are no bypass allowances. No second approval is required while the owner is the sole maintainer, so owner-authored PRs are not blocked on self-approval. The owner's merge decision remains an operating boundary, not a separate identity enforced against agents using that same account.
+
+The README now distinguishes implemented but unmerged features from unrun trials and unstarted proposals. The human and agent guides spell out the fork/branch/check/PR flow, contribution terms, review authority and lack of production access. The PR template asks for acceptance evidence and actual check results. No feature, model integration, deployment or private-product port is included in these documentation changes.
+
+Protection is live independently of this PR. The revised instructions remain on PR #6 until the owner merges it. PRs #3/#4/#5 still need current-repository checks after a branch update; their earlier exact-commit evidence is not a substitute for the newly required check.
