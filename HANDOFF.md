@@ -5,25 +5,37 @@ date: 2026-10-17
 
 # Community review queue
 
+## Current next contribution
+
+[Issue #8](https://github.com/aschiff98/triangle-startups-community/issues/8) is the next proposed starter for Atishay: import a sanitized aggregator export, compare two saved job lists and deliver a reproducible report with sources, dates and uncertainty. It remains voluntary and unassigned until accepted. Start with fictional exports and the bundled fictional roster; a real run needs an approved saved Triangle Startups public-job snapshot. No private database or production access is available.
+
+The comparator is preserved at `ff57d6148183e717b9927d3af672f53b6922b266`, not on main. Issue #8 names the exact three files to restore onto a fresh branch, preserving current docs. The new contribution owns the importer, input mapping and report, rather than rebuilding the comparison engine.
+
+Optional public-source research and small local tools are welcome as separate issues and branches. Record the problem, evidence, permitted inputs and success criterion. Maintained integrations, credentials, dependencies, live crawlers, paid services, schedules and production authority remain separate decisions. No optional proposal is a condition of completing #8 or a promise of payment.
+
+**Next prompt:** Read issue #8 and confirm the agreed export format with a fictional sample. Restore only its three comparator files from the pinned reference, then build and check the offline importer/report in one separate PR. Keep real data outside Git unless approved. Do not implement the optional tool/source ideas as part of that task.
+
+## Current repository state
+
 `main` is protected as of 2026-10-17: PRs, an up-to-date branch, the GitHub Actions **Test, build and types** check and resolved review conversations are required. The rule includes admins and blocks force pushes and deletion. Required second approvals are zero while Adam is the sole maintainer; this is not an independent human identity gate. Agents must stop at a review-ready PR and wait for Adam's explicit merge instruction.
 
-The [README work table](README.md#what-is-ready-and-what-is-next), [contributor guide](CONTRIBUTING.md) and [agent instructions](AGENTS.md) explain access, scope, terms, checks and stopping points. These documentation changes await review in [PR #6](https://github.com/aschiff98/triangle-startups-community/pull/6); they reach the default branch only when Adam merges it.
+The [README starter](README.md#the-current-starter-job-export-comparison), [contributor guide](CONTRIBUTING.md) and [agent instructions](AGENTS.md) explain access, scope, terms, checks and stopping points. PR #6 merged the original instructions at `91f01ae8106e00a688909d4bff953cd00fa45c83`; the subsequent cleanup closed PRs #3/#4/#5 and completed issues #1/#2 without deleting their branches.
 
 | Work | Review state on 2026-10-17 | Next action |
 | --- | --- | --- |
-| Coverage comparator | Implemented in [PR #3](https://github.com/aschiff98/triangle-startups-community/pull/3), unmerged. | Review the existing implementation; do not rebuild issue #1. |
-| Clear next actions | Implemented in [PR #4](https://github.com/aschiff98/triangle-startups-community/pull/4), unmerged. | Review the screenshots and implementation; do not rebuild issue #2. |
-| Claude trial preparation | [PR #5](https://github.com/aschiff98/triangle-startups-community/pull/5), unmerged; no Claude run. | Review the bounded task/checker and select an exact starting commit before authorizing a trial. |
-| Triangle Q&A | [Issue #7](https://github.com/aschiff98/triangle-startups-community/issues/7) and brief in PR #6; no prototype. | Agree a first task, source permissions, evaluation and contribution terms. |
+| Coverage comparator | Implemented in closed [PR #3](https://github.com/aschiff98/triangle-startups-community/pull/3), absent from main. | Reuse the pinned files for #8; do not rebuild issue #1. |
+| Clear next actions | Implemented in closed [PR #4](https://github.com/aschiff98/triangle-startups-community/pull/4), absent from main. | Preserved reference; do not rebuild issue #2. |
+| Claude trial preparation | Closed [PR #5](https://github.com/aschiff98/triangle-startups-community/pull/5), parked; no Claude run. | Revisit only as a separately selected, bounded trial. |
+| Triangle Q&A | [Issue #7](https://github.com/aschiff98/triangle-startups-community/issues/7) and [brief on main](proposals/triangle-questions.md); no prototype. | Agree a first task, source permissions, evaluation and contribution terms. |
 
-The feature PRs predate Actions activation in this final repository. They have prior exact-commit validation, but the required check here must run after their next branch update before merge. Do not manufacture a passing status or bypass protection. PR #6 runs current-repository checks on its documentation updates.
+The archived branches have prior validation, but every new contribution must run current checks. Do not manufacture a passing status or bypass protection. Their separate private-product integration review remains outside this task.
 
 ## Publication boundary
 
 The community starter is public under MIT using a fresh independent Git history. Both earlier repository copies remain private because the owner chose not to publish their personal author contact metadata. Commit-email privacy is enabled, and the final repository's generated PR merge commits use GitHub no-reply identities. The public repository recreates the original issues and separate contribution PRs without copying old Git objects or workflow records. Clone the new community repository for future work; do not push branches from an old local clone into it.
 
-The separate coverage, compact-results and Claude preparation PRs remain for review. Claude has not run or been connected. Publication does not deploy Triangle Startups or grant access to its private platform.
+The separate coverage and compact-results PRs are closed implementation references; Claude preparation is parked. Claude has not run or been connected. Publication does not deploy Triangle Startups or grant access to its private platform.
 
 The next proposed project is a small, self-hostable Triangle startup Q&A experiment. Read proposals/triangle-questions.md for the ownership distinction, approved-source requirement, citation/refusal checks and conditional $6.35 generation estimate for 10,000 short questions. No inference, training, new credentials or spending was started.
 
-**Next prompt:** Review PR #6 for the contributor guide, publication receipt and Q&A proposal, then review the separate feature PRs. For a Q&A experiment, first choose one explicitly shareable or fictional collection and a frozen question set, and agree scope and terms. Build any authorized prototype in a separate reviewed PR. Keep paid execution, hosting, model-weight publication and production integration as later concrete decisions.
+The Q&A idea is not part of #8. If selected later, first choose a shareable collection and frozen questions, agree scope/terms, and keep paid execution, hosting, model-weight publication and production integration as separate decisions.

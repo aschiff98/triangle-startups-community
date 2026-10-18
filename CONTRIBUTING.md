@@ -5,7 +5,7 @@ date: 2026-10-17
 
 # Contributing
 
-Read the [work table](README.md#what-is-ready-and-what-is-next) before choosing a task. The first two issues already have implementations in PRs #3 and #4. Review those PRs or agree a follow-up instead of building the same features again. A proposed project is not an assigned task or permission to connect services, spend money or run an agent.
+Start with [job export comparison, issue #8](https://github.com/aschiff98/triangle-startups-community/issues/8), or propose a separate tool/data-source idea below. The original issues #1/#2 are completed and closed; PRs #3/#4 are preserved references, not active assignments. A proposed project is not an accepted assignment or permission to connect services, spend money or run an agent.
 
 ## Start a contribution
 
@@ -20,6 +20,16 @@ npm ci
 ```
 
 Use Node 22. A short issue note describing the chosen scope helps avoid duplicate work; it is not a paid assignment or a promise of integration. For an existing PR review or trial, use that PR's exact branch and record the starting commit. Do not assume unmerged files are on `main`. Read [AGENTS](AGENTS.md) before asking an agent to work here.
+
+For issue #8, follow its explicit instructions to restore only the comparator, test and command from the fixed archived commit onto your new branch. Do not merge the whole archived branch or replace current instructions with its older files. Use the fictional roster immediately; a real Triangle Startups comparison needs an approved saved public-job snapshot, which is not bundled here.
+
+## Propose a tool or data source
+
+Public-source research and small local prototypes using fictional or explicitly shareable inputs are welcome. Open a separate issue describing the problem, who would use the result, what it adds beyond existing coverage, the smallest useful deliverable and how to check it. Keep each idea on its own branch so the export task stays bounded.
+
+For a data source, include its public link, relevant coverage, a small shareable example, observation/publication dates, reuse or access terms, likely refresh needs and any cost. State unknowns and possible duplicates. Proposing a source does not authorize publishing its full contents or wiring it into production. For a tool, provide a runnable example and a concrete success criterion. Agree the implementation scope and contribution terms before turning either into a maintained integration.
+
+Read-only research and local fixture prototypes do not require production access. New dependencies, live crawlers, schedules, service accounts, paid calls, workflow authority and production connections remain separate maintainer decisions. Agents work on the issue selected by their user; this invitation does not authorize unattended agents to select or launch new projects.
 
 ## What done looks like
 
@@ -56,4 +66,4 @@ Checks use a GitHub-hosted runner, pinned actions and a read-only repository tok
 
 ## Terms and credit
 
-The [README terms](README.md#contribution-terms) apply to the two starter issues. Public credit names the actual work and uses the contributor's approved name/link. By submitting a contribution you authored, you offer it under this repository's MIT License and retain your copyright. Code copied from another project needs an identified owner, compatible license and reuse permission. Preserve third-party notices. This repository does not transfer ownership of future work or extend a general license to the private platform. Integration into Triangle Startups is a separate human review.
+The [README terms](README.md#contribution-terms) apply to the current export-comparison starter and the two completed starter issues. Optional proposals do not promise payment or continuing work; agree terms for later implementation separately. Public credit names the actual work and uses the contributor's approved name/link. By submitting a contribution you authored, you offer it under this repository's MIT License and retain your copyright. Code copied from another project needs an identified owner, compatible license and reuse permission. Preserve third-party notices. This repository does not transfer ownership of future work or extend a general license to the private platform. Integration into Triangle Startups is a separate human review.
