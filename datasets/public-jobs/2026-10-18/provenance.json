@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "triangle-startups.public-jobs-provenance.v1",
+  "captureWindowUtc": [
+    "2026-10-18T00:46:26Z",
+    "2026-10-18T00:47:45Z"
+  ],
+  "preparedAtUtc": "2026-10-18T00:57:01Z",
+  "retrieval": {
+    "method": "Anonymous public website retrieval through Firecrawl; maxAge 0; no authenticated profile or application credential.",
+    "sourceUrls": [
+      "https://triangle-startups.com/jobs",
+      "https://triangle-startups.com/md/jobs"
+    ],
+    "httpStatus": [
+      200,
+      200
+    ],
+    "publicRosterParity": "All 298 employer/title/posting-URL triples from the anonymous HTML job roster matched the complete Markdown roster, including multiplicity.",
+    "sourceSha256": {
+      "anonymousHtml": "0f714d7689a2039f2ca45b68623d4a60105ae733dfa0c3cbb197f76780d3cd78",
+      "markdown": "52ab6a7913435d80f813b2f0907be7df5fcb05a6293868b1ee437a62e00b8600"
+    },
+    "hashBasis": "Saved UTF-8 Firecrawl capture files, not raw HTTP wire bytes."
+  },
+  "publicationRequest": "Prepared at the operator request for a sanitized snapshot of Triangle Startups public jobs for community issue #8.",
+  "selection": "Only employer, title, public posting/detail URLs, public startup/support classification, source dates and synthetic record ID. No descriptions, private notes, contacts, applicant/candidate records, internal database IDs, account data or credentials.",
+  "recordIds": "Synthetic row IDs derived from employer, title and posting URL. These are not database IDs or a claim that job identity should be matched by title.",
+  "availability": "unknown for every row; capture establishes public roster membership, not a new employer check.",
+  "scopeBasis": "The public page classified 297 startup roles and one startup-support role. Its support role is NC IDEA. No new company classification was inferred.",
+  "validation": {
+    "records": 298,
+    "uniqueRecordIds": 298,
+    "employers": 64,
+    "scopes": {
+      "startup": 297,
+      "ecosystem": 1
+    },
+    "missingPostedOn": 104,
+    "missingFirstObservedOn": 5,
+    "missingFetchedOn": 8,
+    "distinctExactEmployerUrlPairs": 279,
+    "sharedExactEmployerUrlPairs": 7,
+    "publicDetailLinks": 131,
+    "sourceLinkAudit": "All 298 source links match the public Markdown roster, use HTTP(S), contain no URL credentials or email addresses, and contain no access-token, API-key, session, authorization or signature query keys."
+  },
+  "files": [
+    {
+      "path": "public-jobs.json",
+      "sha256": "1a48b8c96bd3eb8ce8e5d88a2ea1822c385ce91a609fc26ab100094fbcae24e0",
+      "bytes": 145594
+    },
+    {
+      "path": "public-jobs.csv",
+      "sha256": "1829b7f5cb480e545b2d1321e5ae93e964fa36c959513a08bd7fb909a905ae60",
+      "bytes": 70011
+    }
+  ]
+}

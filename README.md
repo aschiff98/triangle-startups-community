@@ -16,10 +16,10 @@ Humans should read [CONTRIBUTING](CONTRIBUTING.md); coding agents must also read
 ## The current starter: job export comparison
 
 1. Document the aggregator's export fields using a small fictional example. Import job information only; leave application, candidate and private account data out.
-2. Reuse the comparator preserved in closed PR #3. It is absent from `main`; [issue #8](https://github.com/aschiff98/triangle-startups-community/issues/8) gives the fixed commit and exact files to carry into a fresh task branch. The fictional Triangle Startups roster is available now. Adam supplies or approves a saved public-job snapshot for a real run; no production access is needed.
+2. Reuse the comparator preserved in closed PR #3. It is absent from `main`; [issue #8](https://github.com/aschiff98/triangle-startups-community/issues/8) gives the fixed commit and exact files to carry into a fresh task branch. Our [sanitized public snapshot](datasets/public-jobs/2026-10-18/README.md) is ready: [JSON](datasets/public-jobs/2026-10-18/public-jobs.json) or [CSV](datasets/public-jobs/2026-10-18/public-jobs.csv), with 298 listing rows captured October 18 UTC. Use fictional fixtures for tests and this saved roster for a real comparison; no production access is needed.
 3. Hand in one PR with a documented command, readable report, machine-readable output, fictional tests and remaining limits. Show job links and dates; keep missing or conflicting evidence unresolved. A fictional demonstration does not establish a live coverage gap.
 
-Read the issue for the inputs, allowed scope and full definition of done. Real files stay outside Git unless approved for public release. Do not assume the public search API returns jobs.
+Read the issue for the inputs, allowed scope and full definition of done. The snapshot preserves unknown dates and flags shared careers-page URLs; the new importer must handle those limits. This specific public snapshot is approved for the contribution. Other real files stay outside Git unless approved for public release. Do not assume the public search API returns jobs.
 
 ## New tools and data sources are welcome
 
@@ -56,7 +56,7 @@ The export-comparison starter is voluntary and has **no monetary compensation**.
 
 ## What this environment contains
 
-It contains no original Git history, private intake, real candidate records, environment files, database clients, analytics or production deployment connection. Real employer holds are replaced by fictional fixtures. `packet-manifest.json` records source hashes, the original audited archive receipt and the separately reviewed collaboration additions. The manifest and its verifier describe the original exported packet, including historical document hashes. They are not a validator for this licensed publication or later contributions. Use Git review, tests, typechecking and build to validate current work.
+It contains no original Git history, private intake, real candidate records, environment files, database clients, analytics or production deployment connection. Real employer holds are replaced by fictional fixtures. The separately labeled `datasets/public-jobs/` snapshot contains real public job facts only; its provenance file records the capture and checksums. `packet-manifest.json` records source hashes, the original audited archive receipt and the separately reviewed collaboration additions. The manifest and its verifier describe the original exported packet, including historical document hashes. They are not a validator for this licensed publication or later contributions. Use Git review, tests, typechecking and build to validate current work.
 
 GitHub Actions checks pull requests without application secrets. A successful check or merge here does not deploy Triangle Startups. Adam reviews any later integration into the private product separately. Keep real resumes, application answers, private conversations and credentials out of issues, commits and screenshots.
 
