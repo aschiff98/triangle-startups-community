@@ -21,7 +21,7 @@ npm ci
 
 Use Node 22. A short issue note describing the chosen scope helps avoid duplicate work; it is not a paid assignment or a promise of integration. For an existing PR review or trial, use that PR's exact branch and record the starting commit. Do not assume unmerged files are on `main`. Read [AGENTS](AGENTS.md) before asking an agent to work here.
 
-For issue #8, follow its explicit instructions to restore only the comparator, test and command from the fixed archived commit onto your new branch. Do not merge the whole archived branch or replace current instructions with its older files. Use the fictional roster immediately; a real Triangle Startups comparison needs an approved saved public-job snapshot, which is not bundled here.
+For issue #8, follow its explicit instructions to restore only the comparator, test and command from the fixed archived commit onto your new branch. Do not merge the whole archived branch or replace current instructions with its older files. Use fictional fixtures for tests. The [approved public-job snapshot](datasets/public-jobs/2026-10-18/README.md) supplies our side of a real comparison in JSON/CSV; Atishay's sanitized export supplies the other side. Preserve unknown dates and review the shared-URL limitations instead of silently dropping roster entries. This snapshot is approved for publication; other real inputs/reports still need separate approval.
 
 ## Propose a tool or data source
 

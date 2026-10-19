@@ -7,13 +7,15 @@ date: 2026-10-17
 
 ## Current next contribution
 
-[Issue #8](https://github.com/aschiff98/triangle-startups-community/issues/8) is the next proposed starter for Atishay: import a sanitized aggregator export, compare two saved job lists and deliver a reproducible report with sources, dates and uncertainty. It remains voluntary and unassigned until accepted. Start with fictional exports and the bundled fictional roster; a real run needs an approved saved Triangle Startups public-job snapshot. No private database or production access is available.
+[Issue #8](https://github.com/aschiff98/triangle-startups-community/issues/8) is the next proposed starter for Atishay: import a sanitized aggregator export, compare two saved job lists and deliver a reproducible report with sources, dates and uncertainty. It remains voluntary and unassigned until accepted. PR #9 merged the current starter instructions at `97f0d49e0e112cba0e94fc6903c78c3a94e4b6b1`. Our [approved public snapshot](datasets/public-jobs/2026-10-18/README.md) now supplies 298 roster rows in JSON/CSV; the contributor still supplies a sanitized aggregator export. No private database or production access is available.
+
+Capture window: 2026-10-18 00:46:26–00:47:45 UTC. All 298 employer/title/posting-URL triples matched the complete anonymous Markdown roster; 297 are startup roles and one is startup support. Preserve 5 unknown first-seen dates, 8 unknown last-check dates and all 298 unknown availability values. Seven source-URL groups span different titles, often through careers pages. Do not report grouped URLs as distinct confirmed jobs or silently discard those rows. The archived CLI is not a drop-in reader for the new snapshot because it requires combined inputs and non-null dates.
 
 The comparator is preserved at `ff57d6148183e717b9927d3af672f53b6922b266`, not on main. Issue #8 names the exact three files to restore onto a fresh branch, preserving current docs. The new contribution owns the importer, input mapping and report, rather than rebuilding the comparison engine.
 
 Optional public-source research and small local tools are welcome as separate issues and branches. Record the problem, evidence, permitted inputs and success criterion. Maintained integrations, credentials, dependencies, live crawlers, paid services, schedules and production authority remain separate decisions. No optional proposal is a condition of completing #8 or a promise of payment.
 
-**Next prompt:** Read issue #8 and confirm the agreed export format with a fictional sample. Restore only its three comparator files from the pinned reference, then build and check the offline importer/report in one separate PR. Keep real data outside Git unless approved. Do not implement the optional tool/source ideas as part of that task.
+**Next prompt:** Read issue #8 and the public snapshot README. Confirm the aggregator format with a fictional sample, restore only the three pinned comparator files, and build/check the offline importer/report in one separate PR. Use our approved snapshot as the Triangle Startups input. Keep other real data outside Git unless approved, preserve unknowns and flag shared-URL ambiguity. Do not implement the optional tool/source ideas as part of that task.
 
 ## Current repository state
 
