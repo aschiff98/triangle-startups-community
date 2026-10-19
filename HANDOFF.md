@@ -1,13 +1,21 @@
 ---
 authored_by: agent
-date: 2026-10-17
+date: 2026-10-19
 ---
 
 # Community review queue
 
+## 2026-10-19 · README for all contributors
+
+The README now welcomes contributors without naming an individual, puts three ways to help near the top and explains the larger recurring-coverage goal in plain language. Issue #8 remains the current offline export-comparison task. PR #10 merged at `2cb685ea2daaebce33a1c86124bcc3867af0b405`; its public snapshot and instructions are on main. This README revision remains a separate review decision.
+
+Read-only security checks on October 19 confirmed public forking, only the owner having write access, protected main, no stored Actions secrets or environments, GitHub-hosted runners, read-only workflow permissions, two allowed actions pinned to commits, first-time-contributor workflow approval and no automatic merge or production deployment in the [workflow](.github/workflows/checks.yml). These settings limit access; the checks test/build/typecheck and do not establish that contributed code is malware-free. CodeQL default setup is not configured, Dependabot alerts/security updates are disabled, repository-level secret scanning/push-protection settings report disabled, and no independent approving review is required. Maintainers can recheck [security settings](https://github.com/aschiff98/triangle-startups-community/settings/security_analysis), [Actions settings](https://github.com/aschiff98/triangle-startups-community/settings/actions) and the [documented protection rules](CONTRIBUTING.md#review-and-branch-protection). No security settings or workflow authority were changed in this README task. GitHub may [separately scan supported public secrets](https://docs.github.com/en/code-security/reference/secret-security/secret-scanning-scope); the repository settings are not evidence that all public secret detection is absent.
+
+**Next prompt:** Review the README-only contributor-facing rewrite and its status note. Keep issue #8 focused on the importer/report. If security hardening is selected as a separate task, prepare required code/dependency checks and maintainer review of scripts, dependencies and workflows; keep untrusted execution isolated and request explicit authorization before changing repository settings or workflow permissions. Do not treat passing tests as a malware scan or connect community code to production automatically.
+
 ## Current next contribution
 
-[Issue #8](https://github.com/aschiff98/triangle-startups-community/issues/8) is the next proposed starter for Atishay: import a sanitized aggregator export, compare two saved job lists and deliver a reproducible report with sources, dates and uncertainty. It remains voluntary and unassigned until accepted. PR #9 merged the current starter instructions at `97f0d49e0e112cba0e94fc6903c78c3a94e4b6b1`. Our [approved public snapshot](datasets/public-jobs/2026-10-18/README.md) now supplies 298 roster rows in JSON/CSV; the contributor still supplies a sanitized aggregator export. No private database or production access is available.
+[Issue #8](https://github.com/aschiff98/triangle-startups-community/issues/8) is the current proposed starter for contributors: import a sanitized aggregator export, compare two saved job lists and deliver a reproducible report with sources, dates and uncertainty. It remains voluntary and unassigned until accepted. PR #9 merged the current starter instructions at `97f0d49e0e112cba0e94fc6903c78c3a94e4b6b1`. Our [approved public snapshot](datasets/public-jobs/2026-10-18/README.md) now supplies 298 roster rows in JSON/CSV; the contributor still supplies a sanitized aggregator export. No private database or production access is available.
 
 Capture window: 2026-10-18 00:46:26–00:47:45 UTC. All 298 employer/title/posting-URL triples matched the complete anonymous Markdown roster; 297 are startup roles and one is startup support. Preserve 5 unknown first-seen dates, 8 unknown last-check dates and all 298 unknown availability values. Seven source-URL groups span different titles, often through careers pages. Do not report grouped URLs as distinct confirmed jobs or silently discard those rows. The archived CLI is not a drop-in reader for the new snapshot because it requires combined inputs and non-null dates.
 
