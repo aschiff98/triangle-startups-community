@@ -1,17 +1,27 @@
 ---
 authored_by: agent
-date: 2026-10-19
+date: 2026-10-20
 ---
 
 # Community review queue
 
+## 2026-10-20 · Three optional proposals published
+
+The maintainer selected publication of the revised Claude drafts and a README update PR. The three issues are live and unassigned: [accessible views #12](https://github.com/aschiff98/triangle-startups-community/issues/12), [offline research tools #13](https://github.com/aschiff98/triangle-startups-community/issues/13) and [community-guide prototype #14](https://github.com/aschiff98/triangle-startups-community/issues/14). The README and contributor guide now link them while keeping #8 as the current job-export starter. No proposal implementation is included in this documentation branch.
+
+The accessibility proposal has a smaller first milestone and separate text-resize/reflow checks. Research keeps provenance, amendment chains, co-issuers, exact money and unknown dates, with fictional fixtures and no network access. Guides use passive Markdown with accurate authorship, approved credit and tests for hostile content; renderer dependencies remain a separate explicit decision. Existing MIT documentation terms remain in effect. New proposals are unpaid, with scope, credit and support agreed before implementation; the current starter's vouch and concierge offer is not automatically extended.
+
+PR #11 merged the earlier README rewrite at `c89ff438a70244b1567b99471de9e05074c03b02`, the starting point of this branch. The GitHub connector could read the repo but issue creation returned 403; the existing authenticated CLI published the proposals after duplicate checks. No app permissions, repository settings, dependencies, license files, workflows or production connections changed.
+
+**Next prompt:** Review the documentation PR linking issues #12/#13/#14. After merge, choose one issue and agree its first deliverable, allowed files, fixtures and terms before any implementation. Keep #8 independent. Do not implement all proposals, add a tool server, connect a model, change the license or enable new services merely because they are mentioned in the proposals. The October 19 security findings below remain a separate follow-up and were not re-audited or fixed by this task.
+
 ## 2026-10-19 · README for all contributors
 
-The README now welcomes contributors without naming an individual, puts three ways to help near the top and explains the larger recurring-coverage goal in plain language. Issue #8 remains the current offline export-comparison task. PR #10 merged at `2cb685ea2daaebce33a1c86124bcc3867af0b405`; its public snapshot and instructions are on main. This README revision remains a separate review decision.
+The README welcomes contributors without naming an individual, puts three ways to help near the top and explains the larger recurring-coverage goal in plain language. Issue #8 remains the current offline export-comparison task. PR #10 merged at `2cb685ea2daaebce33a1c86124bcc3867af0b405`; its public snapshot and instructions are on main. The README revision subsequently merged in PR #11 at `c89ff438a70244b1567b99471de9e05074c03b02`.
 
 Read-only security checks on October 19 confirmed public forking, only the owner having write access, protected main, no stored Actions secrets or environments, GitHub-hosted runners, read-only workflow permissions, two allowed actions pinned to commits, first-time-contributor workflow approval and no automatic merge or production deployment in the [workflow](.github/workflows/checks.yml). These settings limit access; the checks test/build/typecheck and do not establish that contributed code is malware-free. CodeQL default setup is not configured, Dependabot alerts/security updates are disabled, repository-level secret scanning/push-protection settings report disabled, and no independent approving review is required. Maintainers can recheck [security settings](https://github.com/aschiff98/triangle-startups-community/settings/security_analysis), [Actions settings](https://github.com/aschiff98/triangle-startups-community/settings/actions) and the [documented protection rules](CONTRIBUTING.md#review-and-branch-protection). No security settings or workflow authority were changed in this README task. GitHub may [separately scan supported public secrets](https://docs.github.com/en/code-security/reference/secret-security/secret-scanning-scope); the repository settings are not evidence that all public secret detection is absent.
 
-**Next prompt:** Review the README-only contributor-facing rewrite and its status note. Keep issue #8 focused on the importer/report. If security hardening is selected as a separate task, prepare required code/dependency checks and maintainer review of scripts, dependencies and workflows; keep untrusted execution isolated and request explicit authorization before changing repository settings or workflow permissions. Do not treat passing tests as a malware scan or connect community code to production automatically.
+**Remaining follow-up from that review:** If security hardening is selected as a separate task, prepare required code/dependency checks and maintainer review of scripts, dependencies and workflows; keep untrusted execution isolated and request explicit authorization before changing repository settings or workflow permissions. Do not treat passing tests as a malware scan or connect community code to production automatically.
 
 ## Current next contribution
 

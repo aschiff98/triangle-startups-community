@@ -1,6 +1,6 @@
 ---
 authored_by: agent
-date: 2026-10-19
+date: 2026-10-20
 ---
 
 # Triangle Startups community
@@ -18,6 +18,16 @@ This project runs separately from the live site. Contributing requires no privat
 - **Try a small tool.** Propose a useful improvement, such as checking job quality or spotting repeated company records. Explain who it helps and how someone could test it.
 
 For a new idea, open an issue with the problem, a small first result and what done looks like. Agree the scope before building a maintained integration. New dependencies, services, credentials, paid calls, crawlers and schedules need a separate maintainer decision. Read [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## Optional proposals
+
+Choose a proposal that interests you and comment with your first step. Agree scope and contribution terms before implementation; none is an accepted assignment.
+
+- [Accessible views (#12)](https://github.com/aschiff98/triangle-startups-community/issues/12): make the same job results readable as cards, a list or table, and plain text, with keyboard and accessibility checks.
+- [Research tools (#13)](https://github.com/aschiff98/triangle-startups-community/issues/13): turn saved public sources into cited, dated company facts. Start with one offline source adapter and a readable fact sheet.
+- [Community guides (#14)](https://github.com/aschiff98/triangle-startups-community/issues/14): prototype essays and how-tos in this local app, using non-executable Markdown, clear authorship and review before publication.
+
+Each issue describes a small first result, checks and follow-up ideas. The job-export comparison below remains the current starter.
 
 ## The current starter: job export comparison
 
@@ -60,6 +70,8 @@ Current checks test, build and typecheck the app on a GitHub-hosted runner with 
 ## Contribution terms
 
 The current starter and two completed starter tasks are voluntary, with **no monetary compensation**. The offered return is public acknowledgement of the actual work, Adam's vouch and concierge help. Confirm the credit name/link before publication. Participation promises no employment, referral result, deadline or ongoing maintenance. Later work needs separately agreed scope and terms; optional proposals do not create paid assignments.
+
+The optional proposals above are also unpaid. Agree their scope, credit and any support in the issue before implementation; the starter's vouch and concierge offer does not automatically extend to every proposal.
 
 Contributors retain copyright. Contributions use this repository's [MIT License](LICENSE). Identify copied code and its reuse permission, and preserve third-party notices. Fonts and dependencies keep their own licenses; see [NOTICE](NOTICE.md). This license covers the published community project, not the private platform or unpublished data.
 
