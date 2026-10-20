@@ -51,7 +51,7 @@ Open a ready-for-review pull request from your branch into **aschiff98/triangle-
 
 ## Review and branch protection
 
-`main` requires a PR and the **Test, build and types** GitHub Actions check from an up-to-date branch. All review conversations must be resolved. Force pushes and deletion of `main` are blocked, and admins are subject to the same rules. A second approving reviewer is not required while Adam is the sole maintainer, so his own PRs remain mergeable. Adam decides what to merge; agents stop at a review-ready PR unless he explicitly authorizes that merge. Sharing the owner's GitHub credentials does not provide an independent human approval gate.
+`main` requires an up-to-date PR and six checks: **Test, build and types**, **Secret scan**, **Dependency review**, **Dependency audit**, **CodeQL (javascript-typescript)** and **CodeQL (actions)**. The [security guide](SECURITY.md) explains their thresholds and private vulnerability reporting. All review conversations must be resolved. Force pushes and deletion of `main` are blocked, and admins are subject to the same rules. A second approving reviewer is not required while Adam is the sole maintainer, so his own PRs remain mergeable. CODEOWNERS requests maintainer review but does not independently enforce approval. Adam decides what to merge; agents stop at a review-ready PR unless he explicitly authorizes that merge. Sharing the owner's GitHub credentials does not provide an independent human approval gate.
 
 If GitHub says the branch is behind, update your task branch without rewriting its history:
 
@@ -64,7 +64,7 @@ git push origin HEAD
 
 Never push directly to `main`, force-push or weaken protection to get a PR through. If a check fails, fix the cause and push a normal commit. If a check has not run, report the missing result; do not invent a status. PRs created before Actions was enabled may need a new check after their next branch update.
 
-Checks use a GitHub-hosted runner, pinned actions and a read-only repository token. They do not use application secrets or a privileged `pull_request_target` workflow. A maintainer may need to approve a first-time fork's checks under GitHub's settings. There is no automatic merge or production deployment. A community merge does not update the live site. Any later integration into the private product is a separate PR and review. See [GitHub's fork workflow documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#pull_request).
+Checks use GitHub-hosted runners and exact action pins. Permissions default to read-only; only CodeQL requests permission to upload security results. No application secrets or privileged `pull_request_target` workflow are used. A maintainer must review and approve workflow execution for every outside contributor, not just a first-time fork. npm installation hooks are disabled; tests and deliberately invoked commands still execute code. Run unfamiliar code in isolation. There is no automatic merge or production deployment. A community merge does not update the live site. Any later integration into the private product is a separate PR and review. See [GitHub's fork workflow documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#pull_request).
 
 ## Terms and credit
 
