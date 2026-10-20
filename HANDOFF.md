@@ -5,6 +5,16 @@ date: 2026-10-20
 
 # Community review queue
 
+## 2026-10-20 · Security checks prepared for review
+
+The security branch adds secret scanning, dependency review and a full lockfile audit, plus CodeQL checks for application code and Actions workflows. Serious findings, failed scans and missing CodeQL output block the corresponding check. It also adds weekly scans, Dependabot update proposals, a maintainer CODEOWNERS request, installation-hook restrictions and a plain-language [security guide](SECURITY.md). The existing Next.js dependency moves from 16.3.6 to 16.3.8: the initial audit reported a high-severity vulnerable package; the patched full-lockfile audit reports zero vulnerabilities. Six local tests, the typecheck and production build pass. Hosted results belong to the PR's current commit and must be read there.
+
+The maintainer explicitly authorized repository security settings in this task. GitHub readback confirms secret scanning, push protection, Dependabot security updates, private vulnerability reporting and approval for all outside contributors' workflows. Tokens still default to read-only; CodeQL alone requests permission to upload security results. Non-provider-pattern scanning and partner validity checks still report disabled and are not claimed as active. No production credentials, application secrets, deployment or paid service was added. The sole-maintainer policy still requires zero independent approving reviews; CODEOWNERS does not change that.
+
+This update supersedes the October 19 security follow-up below. The security PR must pass all six checks listed in CONTRIBUTING before Adam decides whether to merge it. The weekly workflows and Dependabot configuration become active on `main` only after merge. Keep earlier action pins allowed until that replacement is merged. Contribution issues #8/#12/#13/#14 remain separate and unassigned.
+
+**Next prompt:** Review the security PR and its exact-commit checks, then merge only on Adam's explicit instruction. After merge, verify the first `main` security run and that Dependabot reads its configuration. For future fork PRs, review workflows, scripts and dependencies before approving execution in an isolated environment. Passing checks do not prove code is malware-free or authorize production integration.
+
 ## 2026-10-20 · Three optional proposals published
 
 The maintainer selected publication of the revised Claude drafts and a README update PR. The three issues are live and unassigned: [accessible views #12](https://github.com/aschiff98/triangle-startups-community/issues/12), [offline research tools #13](https://github.com/aschiff98/triangle-startups-community/issues/13) and [community-guide prototype #14](https://github.com/aschiff98/triangle-startups-community/issues/14). The README and contributor guide now link them while keeping #8 as the current job-export starter. No proposal implementation is included in this documentation branch.

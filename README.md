@@ -65,7 +65,7 @@ To contribute, [fork the repository and create a task branch](CONTRIBUTING.md#st
 
 Protected `main` requires an up-to-date pull request, passing checks and resolved review comments. These rules include admins and block force pushes and deletion of `main`. Adam is the sole maintainer, so no independent approving reviewer is required. Agents need his explicit instruction before merging. See [review and protection details](CONTRIBUTING.md#review-and-branch-protection).
 
-Current checks test, build and typecheck the app on a GitHub-hosted runner with a read-only repository token and no application secrets. Passing checks do not prove code is free of malware. Review unfamiliar code, dependency and workflow changes before running them; use a disposable test environment without credentials. There is no automatic merge or production deployment. See [GitHub's security guidance](https://docs.github.com/en/actions/reference/security/secure-use).
+Required checks cover tests/build/types, secrets, dependency vulnerabilities and CodeQL analysis of application code and workflows. Repository secret scanning and push protection are enabled too. CI has no application secrets; only CodeQL can upload security results. Outside contributors need approval before their workflows run. Installation hooks are disabled, but deliberately running tests still executes code. Review unfamiliar changes and use a disposable environment without credentials. Passing checks do not prove code is free of malware. There is no automatic merge or production deployment. Read [SECURITY](SECURITY.md) for the thresholds, remaining limits and private reporting route.
 
 ## Contribution terms
 
