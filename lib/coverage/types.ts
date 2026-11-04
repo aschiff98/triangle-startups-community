@@ -3,7 +3,7 @@ export type CoverageRecord = {
   id: string; employer: string; title: string; sourceUrl: string;
   scope: 'startup' | 'ecosystem' | 'out_of_scope' | 'unknown';
   availability: 'open' | 'closed' | 'unknown';
-  postedOn: string | null; firstObservedOn: string; fetchedOn: string;
+  postedOn: string | null; firstObservedOn: string | null; fetchedOn: string | null;
 }
 export type CoverageInput = { employerRecords: CoverageRecord[]; publicRoster: CoverageRecord[] }
 export type Disposition = 'listed' | 'missing_confirmed_open' | 'availability_unknown' | 'closed' | 'duplicate' | 'out_of_scope' | 'scope_unknown'

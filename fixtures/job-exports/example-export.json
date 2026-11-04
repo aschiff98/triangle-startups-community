@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "atriveo.job-export.v1",
+  "capturedAt": "2026-10-20",
+  "jobs": [
+    { "employer": "Example Orchard", "title": "Software Engineer", "sourceUrl": "https://orchard.example.test/jobs/one?utm_source=feed", "scope": "startup", "availability": "open", "postedOn": null, "firstObservedOn": "2026-10-18", "fetchedOn": "2026-10-20", "location": "Durham, NC" },
+    { "employer": "Example River", "title": "Software Engineer", "sourceUrl": "https://river.example.test/jobs/two", "scope": "startup", "availability": "open", "postedOn": "2026-10-07", "firstObservedOn": "2026-10-18", "fetchedOn": "2026-10-20", "location": "Raleigh, NC", "evidence": "Fictional posting says the role is open." },
+    { "employer": "Example Startup Center", "title": "Program Manager", "sourceUrl": "https://center.example.test/jobs/three", "scope": "ecosystem", "availability": "open", "firstObservedOn": "2026-10-18", "fetchedOn": "2026-10-20" },
+    { "employer": "Example Grove", "title": "Data Engineer", "sourceUrl": "https://grove.example.test/jobs/four", "scope": "startup", "availability": "unknown", "firstObservedOn": "2026-10-18" },
+    { "employer": "Example Harbor", "title": "Designer", "sourceUrl": "https://harbor.example.test/jobs/five", "scope": "startup", "availability": "closed", "fetchedOn": "2026-10-20" },
+    { "employer": "Example Orchard", "title": "Software Engineer", "sourceUrl": "https://orchard.example.test/jobs/one", "scope": "startup", "availability": "open", "fetchedOn": "2026-10-20" },
+    { "employer": "Example Large Employer", "title": "Accountant", "sourceUrl": "https://enterprise.example.test/jobs/six", "scope": "out_of_scope", "availability": "open", "fetchedOn": "2026-10-20" },
+    { "employer": "Example Unclassified", "title": "Analyst", "sourceUrl": "https://unclassified.example.test/jobs/seven", "availability": "open", "fetchedOn": "2026-10-20" },
+    { "employer": "Example River", "title": "Sales Lead", "sourceUrl": "https://river.example.test/careers", "scope": "startup", "availability": "open", "firstObservedOn": "2026-10-18" }
+  ]
+}

@@ -1,0 +1,3 @@
+employer,title,sourceUrl,scope,availability,postedOn,firstObservedOn,fetchedOn,location,evidence
+Example Orchard,Software Engineer,https://orchard.example.test/jobs/one,startup,open,,2026-10-18,2026-10-20,"Durham, NC",
+Example River,Software Engineer,https://river.example.test/jobs/two,startup,open,2026-10-07,2026-10-18,2026-10-20,"Raleigh, NC","Fictional posting says ""open""."
