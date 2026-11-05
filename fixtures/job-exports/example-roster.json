@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "fictional-roster.v1",
+  "note": "Fictional roster for the job export comparison example.",
+  "captureWindowUtc": ["2026-10-19T12:00:00Z", "2026-10-19T12:05:00Z"],
+  "publicRoster": [
+    { "id": "roster-one", "employer": "Example Orchard", "title": "Software Engineer", "sourceUrl": "https://orchard.example.test/jobs/one", "listingUrl": null, "scope": "startup", "availability": "unknown", "postedOn": null, "firstObservedOn": "2026-10-10", "fetchedOn": null, "listedOn": "2026-10-10" },
+    { "id": "roster-two", "employer": "Example River", "title": "Account Executive", "sourceUrl": "https://river.example.test/careers", "listingUrl": null, "scope": "startup", "availability": "unknown", "postedOn": null, "firstObservedOn": null, "fetchedOn": "2026-10-18", "listedOn": null },
+    { "id": "roster-three", "employer": "Example River", "title": "Support Specialist", "sourceUrl": "https://river.example.test/careers", "listingUrl": null, "scope": "startup", "availability": "unknown", "postedOn": null, "firstObservedOn": "2026-10-12", "fetchedOn": "2026-10-18", "listedOn": "2026-10-12" },
+    { "id": "roster-four", "employer": "Example Meadow", "title": "Product Manager", "sourceUrl": "https://meadow.example.test/jobs/eight", "listingUrl": null, "scope": "startup", "availability": "unknown", "postedOn": null, "firstObservedOn": "2026-10-12", "fetchedOn": "2026-10-18", "listedOn": "2026-10-12" }
+  ]
+}

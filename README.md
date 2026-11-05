@@ -39,6 +39,12 @@ The comparison engine is already built but is absent from `main`. [Issue #8](htt
 
 The starter is voluntary and unassigned until accepted. Use fictional examples for tests. The bundled snapshot is approved for sharing; keep other real inputs and reports outside Git unless approved for publication.
 
+To run the comparison, see the [job export comparison guide](docs/job-export-comparison.md). This example uses fictional data:
+
+```sh
+node --import tsx tools/compare-job-exports.ts fixtures/job-exports/example-export.json fixtures/job-exports/example-roster.json
+```
+
 ## Start locally
 
 Install Node 22, then run:
